@@ -1,12 +1,16 @@
 name: Update Example
 
 on:
-  workflow_dispatch:
   push:
+  workflow_dispatch:
 
 jobs:
   demo:
     runs-on: ubuntu-latest
+
     steps:
       - name: Step by 25f2007872@ds.study.iitm.ac.in
-        run: echo "Hello"
+        run: echo "Required email in step name."
+
+      - name: Done
+        run: echo "Workflow ran successfully."
