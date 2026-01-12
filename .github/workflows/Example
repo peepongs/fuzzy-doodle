@@ -1,21 +1,12 @@
 name: Update Example
 
 on:
-  push:
   workflow_dispatch:
-
-permissions:
-  contents: read
+  push:
 
 jobs:
   demo:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
       - name: Step by 25f2007872@ds.study.iitm.ac.in
-        run: echo "Required email in step name."
-
-      - name: Done
-        run: echo "Workflow ran successfully."
+        run: echo "Hello"
