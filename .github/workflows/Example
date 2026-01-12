@@ -1,23 +1,24 @@
-name: Example CI Action
+name: Update Example
 
 on:
   push:
     branches:
       - main
+      - master
   workflow_dispatch:
 
-jobs:
-  demo-job:
-    runs-on: ubuntu-latest
+permissions:
+  contents: read
 
+jobs:
+  demo:
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Step by 25f2007872@ds.study.iitm.ac.in
-        run: |
-          echo "This step includes the required email address."
+        run: echo "Required email in step name."
 
-      - name: Run a sample command
-        run: |
-          echo "GitHub Actions workflow executed successfully."
+      - name: Done
+        run: echo "Workflow ran successfully."
